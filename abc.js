@@ -1,13 +1,12 @@
 
 const box = document.querySelector('.example')
 const span = document.querySelector('span')
+const html = document.querySelector('html')
 
-box.addEventListener('contextmenu', (e) => {
-    e.preventDefault()
+box.addEventListener('copy', (e) => {
     span.style.display = 'block'
 })
 
-span.addEventListener('click', () => {
+html.addEventListener('click', () => {
     span.style.display = 'none'
-    console.log('Deleted Successfully');
 })
