@@ -1,12 +1,14 @@
 
-const box = document.querySelector('.example')
-const span = document.querySelector('span')
-const html = document.querySelector('html')
+const input = document.querySelector('input[type=text]')
 
-box.addEventListener('copy', (e) => {
-    span.style.display = 'block'
+input.addEventListener('keydown', () => {
+    console.log('Sự kiện xảy ra khi người dùng bắt đầu nhấn phím');
 })
 
-html.addEventListener('click', () => {
-    span.style.display = 'none'
+input.addEventListener('keyup', () => {
+    console.log('Sự kiện xảy ra khi người dùng thả phím ra');
+})
+
+input.addEventListener('keypress', () => {
+    console.log('Sự kiện xảy ra khi người dùng bấm phím');
 })
