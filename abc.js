@@ -1,22 +1,44 @@
 
-// Không có Async
-// const promise = new Promise(resolve => {
-//     resolve(['a', 'b', 'c'])
-// })
+// -------------------- undefined --------------------------------
+// Array
+const info1 = ['Quang', 23]
 
-// Chỉ có Async
-const promise = async () => {
-    return ['a', 'b', 'c']
+console.log(info1[3]) //undefined
+
+// Object
+const info2 = {
+    name: 'Quang',
+    age: 23
 }
 
-// promise().then(arr => {
-//     console.log(arr);
-// })
+console.log(info2.address); //undefined
 
-// Có Async/Await
-const run = async () => {
-    const result = await promise()
-    console.log(result);
+// Function
+const doSomething = (name) => {
+    console.log(name);
 }
 
-run()
+doSomething() //undefined
+
+// -------------------- null --------------------------------
+let user = {
+    name: 'Nguyen Van A',
+    age: 22
+}
+
+user = null
+
+console.log(user);
+
+// -------------------- So sánh == và === --------------------------------
+// So sánh ==
+const a = null
+const b = undefined
+
+console.log(a == b); // true
+
+// So sánh ===
+const c = null
+const d = undefined
+
+console.log(c === d); // false
