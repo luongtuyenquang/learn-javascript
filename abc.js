@@ -1,10 +1,15 @@
 
-const input = document.querySelector('input')
-const span = document.querySelector('span')
-
-input.addEventListener('keyup', (e) => {
-    if(e.which === 13){
-        span.style.display = 'block'
-        e.target.value = ''
+function sum(x, y) {
+    if(x === 0) {
+        throw 'Có số 0 !!'
     }
-})
+    else {
+        return x + y
+    }
+}
+try {
+    sum(0, 2)
+}
+catch (err) {
+    console.log(err);
+}
