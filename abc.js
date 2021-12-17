@@ -1,6 +1,10 @@
 
-const h1 = document.querySelector('h1')
+const input = document.querySelector('input')
+const span = document.querySelector('span')
 
-h1.addEventListener('click', (e) => {
-    console.log(e.detail);
+input.addEventListener('keyup', (e) => {
+    if(e.which === 13){
+        span.style.display = 'block'
+        e.target.value = ''
+    }
 })
